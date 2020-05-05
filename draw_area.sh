@@ -72,7 +72,7 @@ done
 
 
 # get the list of aviable(connected) tablet/pen as a single string
-HID_TABLET_OUT=$(xinput | grep -Ei "(pen|tablet)" | tr -cd "[:print:]\n" | tr -s ' ' | sed -e 's/\[.*\]$//g' | grep -P '[ a-zA-Z=0-9]+' -o | sed -e 's/^ //g')
+HID_TABLET_OUT=$(xinput | grep -Ei "(pen|tablet)" | tr -cd "[:print:]\n" | tr -s ' ' | sed -e 's/\[.*\]$//g' | grep -P '[ a-zA-Z=0-9()]+' -o | sed -e 's/^ //g')
 
 # declaration of variables
 HID_TABLET=()
